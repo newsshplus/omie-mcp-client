@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Omie MCP — retorno OAuth</title>
+<style>
+  body { font-family: system-ui, sans-serif; background:#0f172a; color:#e2e8f0; padding:2rem; }
+  .box { max-width: 720px; margin: 0 auto; background:#1e293b; border-radius:12px; padding:1.5rem; }
+  code { display:block; word-break:break-all; background:#020617; padding:1rem; border-radius:8px; margin-top:1rem; font-size:.9rem; }
+  h1 { font-size:1.1rem; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Código de autorização recebido — copie e cole no assistente:</h1>
+  <code id="out">lendo…</code>
+</div>
+<script>
+  var q = location.search || ("?" + location.hash.replace(/^#/, ""));
+  document.getElementById("out").textContent = decodeURIComponent(q.replace(/^\?/, ""));
+</script>
+</body>
+</html>
